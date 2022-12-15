@@ -1,17 +1,17 @@
 {
-  "name": "littledb",
+  "name": "badbankwithreact",
   "version": "1.0.0",
-  "description": "lowdb sample for 1.125",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "abel@mit.edu",
-  "license": "MIT",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "cors": "^2.8.4",
-    "express": "^4.16.3",
-    "lowdb": "^1.0.0",
-    "mongodb": "^3.7.3"
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mongodb": "^4.12.1"
   }
 }

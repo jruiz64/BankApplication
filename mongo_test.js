@@ -1,19 +1,18 @@
 const MongoClient = require('mongodb').MongoClient;
 const url = 'mongodb://localhost:27017';
- 
-// connect to mongo
-MongoClient.connect(url, {useUnifiedTopology: true}, function(err, client) {
-  console.log("Connected successfully to server");
 
-    // database Name
+MongoClient.connect(url, {useUnifiedTopology: true}, function(err, client) {
+    console.log('Connected!')
+
+    //database Name
     const dbName = 'myproject';
     const db = client.db(dbName);
 
-    // new user
+    //new user
     var name = 'user' + Math.floor(Math.random()*10000);
     var email = name + '@mit.edu';
 
-    // insert into customer table
+    //insert into customer table
     var collection = db.collection('customers');
     var doc = {name, email};
     collection.insertOne(doc, {w:1}, function(err, result) {
@@ -26,8 +25,7 @@ MongoClient.connect(url, {useUnifiedTopology: true}, function(err, client) {
         .toArray(function(err, docs) {
             console.log('Collection:',docs);
 
-            // clean up
-            client.close();            
-    });    
-
+            //clean up
+            client.close();
+    });
 });
